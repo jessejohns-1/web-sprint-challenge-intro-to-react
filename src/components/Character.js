@@ -22,7 +22,7 @@ const Characters = (props) => {
                         {/* Can't forget the birth  */}
                         <h2>MoflippinDate Of Birth:<br></br> {res.birth_year}</h2>
                         {/* their height */}
-                        <h2>MoflippinHeight: {res.height}</h2>
+                        <h2>MoflippinHeight: {res.height}centimeters</h2>
                         {/* Hopefully you enjoy my site */}
                         {/* adds emoticon if odd or even on hover*/}
                         <h2>{idx % 2 === 0}</h2>
