@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components'
-import kitty from '../images/download.png'
+
 
 
 //creating properties 
-const Characters = (props,besty) => {
+const Characters = (props) => {
     //Ayee it's now called data
     const { data } = props
 
     return (
         <TopDiv>
-            {/* heyo map over everything in data*/}
+            {/*  so i am maping over the data using my res.id*/}
             {data.map((res,idx) => {
-                return (//i want this specific data to render to my site 
-                    <CharacterCard key={res.id} besty={idx % 2 === 0}>
+                return (// which allows me to set these settings for each index below 
+                                                //odd is my odd even function for my character div
+                    <CharacterCard key={res.id} odd={idx % 2 === 0}> 
                         {/* so they need a name */}
                         <h1>MoflippinName:<br></br> {res.name}</h1>
                         {/* gender */}
@@ -23,6 +24,7 @@ const Characters = (props,besty) => {
                         {/* their height */}
                         <h2>MoflippinHeight: {res.height}</h2>
                         {/* Hopefully you enjoy my site */}
+                        {/* adds emoticon if odd or even on hover*/}
                         <h2>{idx % 2 === 0}</h2>
                     </CharacterCard>
                 )
@@ -30,7 +32,7 @@ const Characters = (props,besty) => {
         </TopDiv>
     )
 }
-
+//my styles using styled-components
 const TopDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -51,8 +53,8 @@ const CharacterCard = styled.div`
     &:hover {
     transition: all 1.1 ease-in-out;
     background-color: white;
-    &::before {
-        content: "${props => props.besty ? `✨HELLLLOOOOOOO WE ARE EVEN✨` : '🙂✔✔ODDDD ONE YOU ARE🙂✔'}";
+    &::before {//this is where odd gets pulled in to do the odd and even function to display
+        content: "${props => props.odd ? `✨HELLLLOOOOOOO WE ARE EVEN✨` : '🙂✔✔ODDDD ONE YOU ARE🙂✔'}";
         color: red;
         font-size: large;
         

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components"
 //tick tock this is my clock
 
-
+//making my clock rotate for no reason.
 const Clockdiv = styled.div`
     display:flex;
     align-items: center;
@@ -19,7 +19,7 @@ const Clockdiv = styled.div`
     }
 }
 `
-
+//made a clock with use state and effect feature.
 function Clock() {
   const [clockState, setClockState] = useState();
 
