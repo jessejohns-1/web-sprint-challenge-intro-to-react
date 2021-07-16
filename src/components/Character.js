@@ -12,10 +12,11 @@ const Characters = (props) => {
             {data.map((res) => {
                 return (
                     <CharacterCard>
-                        <h1> Name:<br></br> {res.name}</h1>
-                        <h2>DOB:<br></br> {res.birth_year}</h2>
-                        <h2>Gender: {res.gender}</h2>
-                        <h2>Height: {res.height}</h2>
+                        <h1>MoflippinName:<br></br> {res.name}</h1>
+                        <h2>MoflippinDate Of Birth:<br></br> {res.birth_year}</h2>
+                        <h2>MoflippinGender: {res.gender}</h2>
+                        <h2>MoflippinHeight: {res.height}</h2>
+                        <h2>I hope you like jazz music.</h2>
                     </CharacterCard>
                 )
             })}
@@ -28,13 +29,18 @@ const TopDiv = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 `
 const CharacterCard = styled.div`
     width: 30em;
     border: 1px solid black;
     margin: 1vh 3vh;
     border-radius: 300px;
-    background-color: pink;
+    opacity: .9;
+    background-color: purple;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    
 `
 
 

@@ -3,7 +3,7 @@ import React, {useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import {MySecrets} from './components/api';
-
+import Clock from './components/clock';
 
 
 
@@ -32,6 +32,7 @@ const App = () => {
   return (
     <div className="App">
      <Characters  data={characters} />
+     <Clock> </Clock>
     </div>
   );
 }
