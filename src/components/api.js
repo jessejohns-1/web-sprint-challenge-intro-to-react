@@ -1,0 +1,1 @@
+export const MySecrets = "https://swapi.dev/api/people/"
