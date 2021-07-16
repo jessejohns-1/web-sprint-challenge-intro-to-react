@@ -18,9 +18,13 @@ const App = () => {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+
+  //fetching my api using axios from imported source under components/api
+
   useEffect(() => {
     axios.get(`${MySecrets}`)
     .then(res => {
+      //setting the data inside of my use state
       setCharacters(res.data)
     })
     .catch(err => {
@@ -28,9 +32,10 @@ const App = () => {
     })
 }, [])
 
-
+//this is returning my app with all the content included from characters and clock folder.
   return (
     <div className="App">
+      {/* adding my characters data attributes  */}
      <Characters  data={characters} />
      <Clock> </Clock>
     </div>
