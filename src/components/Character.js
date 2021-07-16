@@ -1,20 +1,42 @@
-import React from "react"
+import React from 'react';
 import styled from 'styled-components'
-// Write your Character component here
-export const MySecrets = "https://swapi.dev/api/people/"
-//importing
-
-//creating my character card styles
 
 
 
+const Characters = (props) => {
+
+    const { data } = props
+
+    return (
+        <TopDiv>
+            {data.map((res) => {
+                return (
+                    <CharacterCard>
+                        <h1> Name:<br></br> {res.name}</h1>
+                        <h2>DOB:<br></br> {res.birth_year}</h2>
+                        <h2>Gender: {res.gender}</h2>
+                        <h2>Height: {res.height}</h2>
+                    </CharacterCard>
+                )
+            })}
+        </TopDiv>
+    )
+}
+
+const TopDiv = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+`
+const CharacterCard = styled.div`
+    width: 30em;
+    border: 1px solid black;
+    margin: 1vh 3vh;
+    border-radius: 300px;
+    background-color: pink;
+`
 
 
-
-
-//creating my character card
-
-// const Character = ({ characters }} =>
-    
-
-
+export default Characters
+ 
