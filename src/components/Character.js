@@ -37,6 +37,7 @@ const TopDiv = styled.div`
     justify-content: center;
     align-items: center;
     
+    
 `
 const CharacterCard = styled.div`
     width: 30em;
@@ -51,7 +52,14 @@ const CharacterCard = styled.div`
     transition: all 1.1 ease-in-out;
     background-color: white;
     &::before {
-    content: "${props => props.besty ? `✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨HELLLLOOOOOOO LOOKS LIKE WE ARE EVEN✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨` : '🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔ODDDD ONE YOU ARE🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔🙂✔'}";
+        content: "${props => props.besty ? `✨HELLLLOOOOOOO WE ARE EVEN✨` : '🙂✔✔ODDDD ONE YOU ARE🙂✔'}";
+        color: red;
+        font-size: large;
+        
+
+
+
+
   }
   }
 
