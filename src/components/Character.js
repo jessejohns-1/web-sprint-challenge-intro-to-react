@@ -40,7 +40,11 @@ const CharacterCard = styled.div`
     background-color: purple;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.5);
-    
+    &:hover {
+    transition: all 1.1 ease-in-out;
+    background-color: darkblue;
+  }
+
 `
 
 
